@@ -8,6 +8,12 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatTableModule} from '@angular/material/table';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {Component} from '@angular/core';
+import {MatNativeDateModule} from '@angular/material/core';
+
 
 
 @NgModule({
@@ -22,7 +28,11 @@ import {MatTableModule} from '@angular/material/table';
     MatCardModule,
     MatSidenavModule,
     MatMenuModule,
-    MatTableModule
+    MatTableModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
   ]
 })
 

@@ -6,7 +6,6 @@ import { CreateNoteComponent } from './create-note/create-note.component';
 import { UpdateNoteComponent } from './update-note/update-note.component';
 import { NotesComponent } from '../notes/notes.component';
 
-import { HomeModule } from '../home/home.module';
 import { MaterialModule } from 'src/app/material.module';
 
 @NgModule({
@@ -20,10 +19,6 @@ import { MaterialModule } from 'src/app/material.module';
     CommonModule,
     NotesRoutingModule,
     MaterialModule,
-    HomeModule
-  ],
-  exports: [
-    NotesComponent,
   ]
 })
 export class NotesModule { }
