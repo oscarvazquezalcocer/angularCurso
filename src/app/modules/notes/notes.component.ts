@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { INote } from 'src/shared/data';
+import { NotesService } from 'src/app/services/notes.service';
 
 @Component({
   selector: 'app-notes',
@@ -9,16 +10,18 @@ import { INote } from 'src/shared/data';
 
 export class NotesComponent {
   notes:INote[]=[];
-  constructor(){
-    this.notes.push({id:'1',
-    create_on: '11/04/2022',
-    update_on: '12/02/2023',
-    description: 'nueva nota',
-    date: '11/06/1988',
-    status: true,
-  }
-  )};
+  constructor(
+    private noteservice:NotesService){
+      this.noteservice.list().subscribe( response => {
+        this.notes = [...response.Items];
+        console.log(this.notes);
+      })
+    }
 
   displayedColumns: string[] = ['id', 'description', 'date', 'status'];
-  dataSource = this.notes;
+  
+  get dataSource() {
+    return this.notes;
+  }
+  
 }
