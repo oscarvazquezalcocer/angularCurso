@@ -23,6 +23,8 @@ import { MaterialModule } from 'src/app/material.module';
   ],
   exports:[
     HomeComponent,
+    HeaderComponent,
+    FooterComponent,
   ]
 })
 
